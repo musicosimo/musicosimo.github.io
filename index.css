@@ -1,0 +1,306 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #000;
+  }
+
+.slider {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100vh;
+    background:linear-gradient(to left, #ba7453, #d1a984);
+    z-index:-1;
+    margin-bottom:10%;
+
+}
+
+
+/* Header + nav  */
+
+
+nav {
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    min-height:10vh;
+    color:white;
+    align-items:center;
+    
+
+}
+
+#toTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 98;
+  padding: 15px;
+  cursor: pointer;
+}
+
+
+
+#myBtn:hover {
+  background-color: #555;
+
+}
+
+.logo {
+    grid-column:2/3;
+    font-size:48px;
+    text-decoration: none!important;
+    color:black;
+    display:hidden;
+}
+
+section {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items:center;
+    margin-bottom:10%;
+
+}
+
+.hero {
+display:flex;
+height:100%;
+width:100%;
+justify-content: center;
+}
+
+.hero img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    justify-content: center;
+}
+
+.headline {
+    position: absolute;
+    top:75%;
+    left:20%;
+    font-size:70px;
+    transform: translate(-20%, 70%);
+    color:white;
+    z-index:3;
+    transition: ease-out;
+}
+
+
+
+ .topnav {
+    overflow: hidden;
+    display:grid;
+    grid-template-columns: 10% 1fr 1fr 1fr 1fr 1fr 10%;
+    grid-column: 3/4;
+    justify-content: end;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    
+    
+  }
+  
+  #news {
+    grid-column:4/5;
+  }
+  
+
+  .topnav a {
+    padding: 20px;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight:bold
+  }
+  
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+
+/* Extra styling - section 1  */
+
+
+.first{
+    grid-column: 2/3;
+
+}
+
+
+.subtitle {
+    font-size: 64px;
+    font-weight:800;
+    border-right: 7px dotted #ba7453
+}
+
+.paragraph {
+    font-size:18px;
+}
+
+.underline{
+    background-image: linear-gradient(120deg, #ba7453 0%, #d1a984 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    
+    
+}
+
+.underline:hover {
+    background-size: 100% 88%;
+}
+
+.longhero {
+    margin-top:5%;
+    height:70%;
+    width:70%;
+    object-fit: cover;
+}
+
+
+/* Grid setup */
+
+
+main {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 3rem;
+    object-fit: cover;
+    
+}
+
+.col {
+    display: flex;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-top:30%;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+
+  .column {
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 5px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+/* Footer */
+
+
+  footer {
+    margin-top:5%;
+    padding: 5%;
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    background-color: #ba7453;
+    grid-column: wrap;
+  }
+
+      
+@media (min-width: 700px) {
+  .one {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+  .two { 
+    grid-column: 2 / 3 ;
+    grid-row: 1;
+    text-align: center;
+  }
+  .three {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    text-align: center;
+  }
+ 
+
+}
+
+@media (max-width: 700px) {
+ 
+  .one { 
+    text-align: center;
+  }
+  .two { 
+    text-align: center;
+  }
+  .three {
+    text-align: center;
+  }
+  
+
+}
+
+.signature {
+  font-size: 64px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.signature__gallery {
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+#description__footer{
+  font-size:24px;
+}
+
+.fa-facebook-official:hover{
+  color:white;
+}
+
+.flex-container {
+  margin-top:5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
